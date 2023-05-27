@@ -20,18 +20,20 @@ class DataIngestion:
     def initiate_data_ingestion(self):
         logging.info("Entered the data ingestion method or component")
         try:
+            # giving the path of dataset
             df = pd.read_csv('notebook\data\\fifa_final.csv')
             logging.info("Read the dataset as the dataframe")
-
+            # making directory for train data and creating an artifact 
             os.makedirs(os.path.dirname(self.ingestion_config.train_data_path), exist_ok=True)
-
+            # creating raw data file which is a copy of data ingested
             df.to_csv(self.ingestion_config.raw_data_path, index=False, header=True)
 
             logging.info("Train test split initiated")
-            train_set, test_set= train_test_split(df, test_size=0.2, random_state=42)
-
+            # train test split implementation
+            train_set, test_set = train_test_split(df, test_size=0.2, random_state=42)
+            # creating train data copy
             train_set.to_csv(self.ingestion_config.train_data_path, index=False, header=True)
-
+            # creating test data copy
             test_set.to_csv(self.ingestion_config.test_data_path, index=False, header=True)
 
             logging.info("Ingestion of the data is completed")

@@ -6,4 +6,5 @@ matplotlib
 catboost
 feature_engine
 xgboost
+dill
 #-e .

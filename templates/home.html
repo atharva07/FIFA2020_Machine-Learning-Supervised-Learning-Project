@@ -1,0 +1,274 @@
+<html>
+<body>
+    <div class="login">
+       <h1>Fifa player's Overall rating predictor</h1>
+    
+       <form action="{{ url_for('predict_datapoint')}}" method="post">
+        <h1>
+            <legend>Fifa player overall rating predictor</legend>
+        </h1>
+        <div class="mb-3">
+            <label class="form-label">Age of Player</label>
+            <input class="form-control" type="number" name="age"
+                placeholder="Enter your Reading score" min='0' max='100' />
+        </div>
+        <div class="mb-3">
+            <label class="form-label">Height of Player</label>
+            <input class="form-control" type="number" name="height_cm"
+                placeholder="Enter your Reading score" min='0' max='200' />
+        </div>
+        <div class="mb-3">
+            <label class="form-label">Estimated potential of a Player</label>
+            <input class="form-control" type="number" name="potential"
+                placeholder="Enter your Reading score" min='0' max='100' />
+        </div>
+        <div class="mb-3">
+            <label class="form-label">Value of a Player in Euros</label>
+            <input class="form-control" type="number" name="value_eur"
+                placeholder="Enter your Reading score" min='100000' max='500000000' />
+        </div>
+        <!-- <div class="mb-3">
+            <label class="form-label">Preferred foot of a Player</label>
+            <select class="form-control" name="preferred_foot" placeholder="Enter Preferred foot of player" required>
+                <option class="placeholder" selected disabled value="">For Right select 1 and for Left select 0</option>
+                <option value="0">
+                    0
+                </option>
+                <option value="1">
+                    1
+                </option>
+            </select>
+        </div> -->
+        <div class="mb-3">
+            <label class="form-label">Preferred foot of a Player</label>
+            <input class="form-control" type="number" name="preferred_foot"
+                placeholder="For Right select 1 and for Left select 0" min='0' max='1' />
+        </div>
+        <!-- <div class="mb-3">
+            <label class="form-label">Weak foot rating of a Player</label>
+            <select class="form-control" name="weak_foot" placeholder="Enter weak foot rating" required>
+                <option class="placeholder" selected disabled value="">Select rating out of 5 for weaker foot</option>
+                <option value="1">
+                    1
+                </option>
+                <option value="2">
+                    2
+                </option>
+                <option value="3">
+                    3
+                </option>
+                <option value="4">
+                    4
+                </option>
+                <option value="5">
+                    5
+                </option>
+            </select>
+        </div> -->
+        <div class="mb-3">
+            <label class="form-label">Weak foot rating of a Player</label>
+            <input class="form-control" type="number" name="weak_foot"
+                placeholder="Enter weak foot rating out of 5" min='0' max='5' />
+        </div>
+        <!-- <div class="mb-3">
+            <label class="form-label">Skill Moves</label>
+            <select class="form-control" name="skill_moves" placeholder="Enter skill moves rating" required>
+                <option class="placeholder" selected disabled value="">Select rating out of 5 for skill moves</option>
+                <option value="1">
+                    1
+                </option>
+                <option value="2">
+                    2
+                </option>
+                <option value="3">
+                    3
+                </option>
+                <option value="4">
+                    4
+                </option>
+                <option value="5">
+                    5
+                </option>
+            </select>
+        </div> -->
+        <div class="mb-3">
+            <label class="form-label">Skill Moves</label>
+            <input class="form-control" type="number" name="skill_moves"
+                placeholder="Enter skill moves rating out of 5" min='0' max='5' />
+        </div>
+        <div class="mb-3">
+            <label class="form-label">Work rate of player</label>
+            <select class="form-control" name="work_rate"
+                placeholder="Enter work rate of player" required>
+                <option class="placeholder" selected disabled value="">Select Work rate of player</option>
+                <option value="Medium/Medium">
+                    Medium/Medium
+                </option>
+                <option value="High/Medium">
+                    High/Medium
+                </option>
+                <option value="High/High">
+                    High/High
+                </option>
+                <option value="Medium/High">
+                    Medium/High
+                </option>
+                <option value="Medium/Low">
+                    Medium/Low
+                </option>
+                <option value="High/Low">
+                    High/Low
+                </option>
+                <option value="Low/Medium">
+                    Low/Medium
+                </option>
+                <option value="Low/High">
+                    Low/High
+                </option>
+                <option value="Low/Low">
+                    Low/Low
+                </option>
+            </select>
+        </div>
+        <div class="mb-3">
+            <label class="form-label">Team Position</label>
+            <select class="form-control" name="team_position" placeholder="Enter your team position" required>
+                <option class="placeholder" selected disabled value="">Select Team Position</option>
+                <option value="CAM">
+                    CAM
+                </option>
+                <option value="LS">
+                    LS
+                </option>
+                <option value="GK">
+                    GK
+                </option>
+                <option value="ST">
+                    ST
+                </option>
+                <option value="LW">
+                    LW
+                </option>
+                <option value="RCM">
+                    RCM
+                </option>
+                <option value="LCB">
+                    LCB
+                </option>
+                <option value="RW">
+                    RW
+                </option>
+                <option value="SUB">
+                    SUB
+                </option>
+                <option value="CF">
+                    CF
+                </option>
+                <option value="CDM">
+                    CDM
+                </option>
+                <option value="RDM">
+                    RDM
+                </option>
+                <option value="RS">
+                    RS
+                </option>
+                <option value="LCM">
+                    LCM
+                </option>
+                <option value="RB">
+                    RB
+                </option>
+                <option value="LB">
+                    LB
+                </option>
+                <option value="LM">
+                    LM
+                </option>
+                <option value="RCB">
+                    RCB
+                </option>
+                <option value="LF">
+                    LF
+                </option>
+                <option value="CB">
+                    CB
+                </option>
+                <option value="RM">
+                    RM
+                </option>
+                <option value="LDM">
+                    LDM
+                </option>
+                <option value="RF">
+                    RF
+                </option>
+                <option value="REs">
+                    RES
+                </option>
+                <option value="LWB">
+                    LWB
+                </option>
+                <option value="CM">
+                    CM
+                </option>
+                <option value="LAM">
+                    LAM
+                </option>
+                <option value="RWB">
+                    RWB
+                </option>
+                <option value="RAM">
+                    RAM
+                </option>
+            </select>
+        </div>
+        <div class="mb-3">
+            <label class="form-label">Attacking Heading Accuracy</label>
+            <input class="form-control" type="number" name="attacking_heading_accuracy"
+                placeholder="Enter attacking heading Accuracy" min='0' max='100' />
+        </div>
+        <div class="mb-3">
+            <label class="form-label">Skill Dribbling</label>
+            <input class="form-control" type="number" name="skill_dribbling"
+                placeholder="Enter skill Dribbling" min='0' max='100' />
+        </div>
+        <div class="mb-3">
+            <label class="form-label">Skill ball Control</label>
+            <input class="form-control" type="number" name="skill_ball_control"
+                placeholder="Enter skill ball control" min='0' max='100' />
+        </div>
+        <div class="mb-3">
+            <label class="form-label">Movement Reaction</label>
+            <input class="form-control" type="number" name="movement_reactions"
+                placeholder="Enter movement reaction of player" min='0' max='100' />
+        </div>
+        <div class="mb-3">
+            <label class="form-label">Power Jumping</label>
+            <input class="form-control" type="number" name="power_jumping"
+                placeholder="Enter power jumping of player" min='0' max='100' />
+        </div>
+        <div class="mb-3">
+            <label class="form-label">Power Strength</label>
+            <input class="form-control" type="number" name="power_strength"
+                placeholder="Enter power strength" min='0' max='100' />
+        </div>
+        <div class="mb-3">
+            <label class="form-label">Mentality Vision</label>
+            <input class="form-control" type="number" name="mentality_vision"
+                placeholder="Enter mentality vision" min='0' max='100' />
+        </div>
+        <div class="mb-3">
+            <label class="form-label">Pace</label>
+            <input class="form-control" type="number" name="pace_median"
+                placeholder="Enter Pace" min='0' max='100' />
+        </div>
+        <div class="mb-3">
+            <input class="btn btn-primary" type="submit" value="Predict overall rating" required />
+        </div>
+    </form>
+    <h2>
+       THE  prediction is {{results}}
+    </h2>
+   <body>
+</html>

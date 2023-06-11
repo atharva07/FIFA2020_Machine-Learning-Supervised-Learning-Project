@@ -1,21 +1,21 @@
 <html>
+<head>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
 <body>
     <div class="login">
-       <h1>Fifa player's Overall rating predictor</h1>
+       <h1 align="center", style="font-family: Comic Sans MS;">Fifa player's Overall rating predictor</h1>
     
        <form action="{{ url_for('predict_datapoint')}}" method="post">
-        <h1>
-            <legend>Fifa player overall rating predictor</legend>
-        </h1>
         <div class="mb-3">
             <label class="form-label">Age of Player</label>
             <input class="form-control" type="number" name="age"
-                placeholder="Enter your Reading score" min='0' max='100' />
+                placeholder="Enter age" min='0' max='100' />
         </div>
         <div class="mb-3">
             <label class="form-label">Height of Player</label>
             <input class="form-control" type="number" name="height_cm"
-                placeholder="Enter your Reading score" min='0' max='200' />
+                placeholder="Enter height" min='0' max='200' />
         </div>
         <div class="mb-3">
             <label class="form-label">Estimated potential of a Player</label>
@@ -27,18 +27,6 @@
             <input class="form-control" type="number" name="value_eur"
                 placeholder="Enter your Reading score" min='100000' max='500000000' />
         </div>
-        <!-- <div class="mb-3">
-            <label class="form-label">Preferred foot of a Player</label>
-            <select class="form-control" name="preferred_foot" placeholder="Enter Preferred foot of player" required>
-                <option class="placeholder" selected disabled value="">For Right select 1 and for Left select 0</option>
-                <option value="0">
-                    0
-                </option>
-                <option value="1">
-                    1
-                </option>
-            </select>
-        </div> -->
         <div class="mb-3">
             <label class="form-label">Preferred foot of a Player</label>
             <input class="form-control" type="number" name="preferred_foot"
@@ -267,8 +255,8 @@
             <input class="btn btn-primary" type="submit" value="Predict overall rating" required />
         </div>
     </form>
-    <h2>
-       THE  prediction is {{results}}
+    <h2 align="center", style="font-family: Comic Sans MS;">
+       The  predicted overall rating is: {{results}}
     </h2>
    <body>
 </html>

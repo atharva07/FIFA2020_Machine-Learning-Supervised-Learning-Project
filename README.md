@@ -40,5 +40,15 @@ skill dribbling, skill ball control, movement reactions, power jumping, power st
 ## Installation
 
 1. Clone this repository: `git clone https://github.com/atharva07/FIFA2020_ML_Project.git`
-2. Navigate to the project directory.
+2. Navigate to the project directory. `cd FIFA2020_ML_Project`
 3. Install the required dependencies: `pip install -r requirements.txt`
+
+## Usage
+
+1. Run the application: `python app.py`
+2. Access the web interface in your browser at `http://localhost:5000`
+3. Fill in the players information and submit the form to obtain the predicted overall rating.
+
+## Dataset
+
+The dataset used for training the machine learning model is sourced from [Kaggle - FIFA 21 Complete player dataset](https://www.kaggle.com/datasets/stefanoleone992/fifa-21-complete-player-dataset). It contains information about player's different attributes like age, height, wage, value in euros, skill moves ets.

@@ -29,3 +29,16 @@ In today's date understanding the factors which contribute to players overall ra
 **Note: This Project is for Educational Purpose Only**
 
 The overall rating Predictor project is developed for educational purposes to showcase the application of machine learning techniques in predicting player's performance. The results obtained from this project are based on a specific dataset and machine learning model, and should not be considered as definitive or accurate predictions for real-world scenarios. The primary goal of this project is to demonstrate the end-to-end process of developing a machine learning model and provide insights into the factors influencing player's performance.
+
+## Features 
+- Predict players overall rating in mathematics based on multiple factors.
+- Provides insights into the influence of following features:
+- age, height, probable potential, value eur, preferred foot, weak foot, skill moves, attacking heading accuracy, 
+skill dribbling, skill ball control, movement reactions, power jumping, power strength, mentality vision, pace, work rate, team position.
+- User-friendly interface for inputing student information and obtaining predictions.
+
+## Installation
+
+1. Clone this repository: `git clone https://github.com/atharva07/FIFA2020_ML_Project.git`
+2. Navigate to the project directory.
+3. Install the required dependencies: `pip install -r requirements.txt`

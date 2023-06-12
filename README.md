@@ -51,4 +51,4 @@ skill dribbling, skill ball control, movement reactions, power jumping, power st
 
 ## Dataset
 
-The dataset used for training the machine learning model is sourced from [Kaggle - FIFA 21 Complete player dataset](https://www.kaggle.com/datasets/stefanoleone992/fifa-21-complete-player-dataset). It contains information about player's different attributes like age, height, wage, value in euros, skill moves ets.
+The dataset used for training the machine learning model is sourced from [Kaggle - FIFA 21 Complete player dataset](https://www.kaggle.com/datasets/stefanoleone992/fifa-21-complete-player-dataset). It contains information about player's different attributes like age, height, wage, value in euros, skill moves and other different attributes which are essential for analysis of player and making informed decisions.

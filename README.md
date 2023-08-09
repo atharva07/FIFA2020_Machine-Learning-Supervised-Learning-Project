@@ -1,4 +1,4 @@
-## End to End Machine Learning Project.
+## End to End Machine Learning Project. (Supervised Learning) 
 
 ![Alt text](static/Fifa21.jpg)
 
